@@ -1,0 +1,41 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+@import './global/mixins/mixins.scss';
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    @include flex (row, 0, center, center);
+}
+.cards{
+    padding: 2rem;
+    width: 100%;
+    gap: 1.5rem;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    justify-items: center;
+    align-items: center;
+    &__card{
+        @include flex(column, 0, center, center);
+        min-width: 18rem;
+        max-width: 20.375rem;
+        height: 20rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+    }
+    &__img{
+        width: 100%;
+        height: min-content;
+    }
+    &__info{
+        @include flex(column, 0, center, center);
+        width: 100%;
+        height: 3.75rem;
+        background-color: var(--secondary);
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+    }
+}
