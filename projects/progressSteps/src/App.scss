@@ -1,0 +1,78 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+.main{
+    @include flex(row, 0, center, center);
+    height: 100vh;
+    width: 100%;
+}
+.item{
+    @include flex(column, 1rem, center, center);
+    background-color: #08063A;
+    padding: 1rem;
+    border-radius: 1rem;
+    &__container{
+        @include flex(row, 0, space-between, center);
+        max-width: 100%;
+        min-width: 21rem;
+        position: relative;
+    }
+    &__container::before{
+        content: '';
+        background-color: rgba($color: white, $alpha: 0.5);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 0.25rem;
+        width: 100%;
+        z-index: 0;
+    }
+    &__progress{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background-color: var(--accent);
+        width: 0%;
+        height: 0.25rem;
+        transition: 0.4s ease;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+    &__circle{
+        @include flex(row, 0, center, center);
+        background-color: #08063A;
+        color: var(--text);
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        border: 0.25rem solid rgba($color: white, $alpha: 0.5);
+        transition: 0.4s ease;
+        z-index: 1;
+    }
+    &__circle.active{
+        border-color: var(--accent);
+    }
+    &__containerBtn{
+        @include flex(row, 2rem, center, center);
+        width: 100%;
+    }
+    &__btn{
+        background-color: var(--primary);
+        color: var(--text);
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        &:active{
+            transform: scale(0.8);
+        }
+        &:focus{
+            outline: 0;
+        }
+        &:disabled{
+            background-color: rgba($color: white, $alpha: 0.5);
+            cursor: not-allowed;
+            transform: scale(1);
+        }
+    }
+}

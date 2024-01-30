@@ -1,0 +1,25 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    @include flex(row, 0, center, center);
+}
+
+.buttons{
+    @include flex(row, 1rem, center, center);
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.btn{
+    background-color: var(--secondary);
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:hover {
+        background-color: var(--accent);
+    }
+}

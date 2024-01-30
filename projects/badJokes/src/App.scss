@@ -1,0 +1,42 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    @include flex(row, 0, center, center);
+    padding: 1rem;
+}
+
+.item{
+    @include flex(column, 1rem, center, center);
+    width: 100%;
+    min-width: 15rem;
+    max-width: 30rem;
+    background-color: var(--secondary);
+    border-radius: 1rem;
+    padding: 1rem;
+    & h2{
+        font-size: 2rem;
+        font-family: var(--subtitle);
+        font-weight: bold;
+    }
+    &__jokeContainer{
+        background-color: var(--accent);
+        border-radius: 1rem;
+        padding: 1rem;
+        & p {
+            text-align: center;
+        }
+    }
+    &__btn{
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: var(--primary);
+        cursor: pointer;
+        font-weight: bold;
+        &:hover {
+            background-color: var(--accent);
+        }
+    }
+}

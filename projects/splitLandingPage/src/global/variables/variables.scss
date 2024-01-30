@@ -1,0 +1,48 @@
+/* Define here the Custom properties */
+:root{
+  /*Main*/
+  --primary : #3C0753;
+  --secondary: #720455;
+  
+  /*Complement*/
+  --text: white;
+  --accent: #910A67;
+
+  /*Neutral*/
+  --blackTheme       : #222222;
+  --whiteTheme       : #ececec;
+  --shadowMain       : #c9c9c9;
+  --shadowSec        : #ffffff;
+  --blackBorder      : #00000050;
+
+
+  /* Typography*/
+  --mainType  : 'Prompt';
+  --titleType : 'Montserrat';
+  --subtitle: 'Overlock'
+  };
+  
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat-VariableFont_wight.ttf') format(trueType);
+}
+@font-face {
+  font-family: 'Overlock';
+  src: url('/assets/fonts/Overlock-Bold.ttf') format(trueType);
+}
+@font-face {
+  font-family: 'Prompt';
+  src: url('/assets/fonts/Prompt-Regular.ttf') format(trueType);
+}
+/*Dark theme
+@media (prefers-color-scheme: dark) {
+  :root{
+    --blackTheme    : #ececec;
+    --whiteTheme    : #303030;
+    --shadowMain    : #242424;
+    --shadowSec     : #3c3c3c;
+    
+    --blackBorder   : #FFFFFF50;
+  }
+};
+*/

@@ -1,0 +1,96 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+main{
+    width: 100%;
+    min-height: 100vh;
+}
+.container{
+   position: relative;
+    width: 100%;
+    height: 100%;
+    & h2{
+        font-family: var(--titleType);
+        font-size: 1.5rem;
+        color: var(--text);
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-weight: bold;
+    }
+}
+.btn{
+    @include flex(row, 0, center, center);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    padding: 1rem;
+    font-family: var(--subtitle);
+    background-color: rgba($color: #000000, $alpha: 0.25);
+    &:hover{
+        background-color: var(--accent);
+    }
+
+}
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 1000ms ease-in-out;
+    &--left{
+        left: 0;
+        background-image: url('/public/assets/img/beach.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: rgb(101, 101, 223), $alpha: 0.25);
+        }
+    }
+    &--right{
+        right: 0;
+        background-image: url('/public/assets/img/mountain.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.25);
+        }
+    }
+    .hoverLeft &--left{
+        width: 75%;
+    }
+    .hoverLeft &--right{
+        width: 25%;
+    }
+    .hoverRight &--left{
+        width: 25%;
+    }
+    .hoverRight &--right{
+        width: 75%;
+    }
+}
+
+@media (min-width: 480px) {
+    .container{
+         & h2{
+             font-size: 3rem;
+         }
+     }
+     .btn{
+        width: 15rem;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+     }
+}

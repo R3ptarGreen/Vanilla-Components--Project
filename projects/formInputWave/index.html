@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-octopus.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/App.scss">
+    <title>Form Input Wave</title>
+  </head>
+  <body>
+    <main>
+
+      <section class="item">
+        <form action="" class="item__form">
+          <h1>Please Login</h1>
+          <div class="item__formControl">
+            <input id="email" type="text" required>
+            <label for="email" class="item__label">Email</label>
+          </div>
+          <div class="item__formControl">
+            <input id="password" type="password" name="password" required>
+            <label for="password" class="item__label">Password</label>
+          </div>
+          <button>Login</button>
+          <span>Don't have an account? <a href="#">Register</a></span>
+        </form>
+      </section>
+
+    </main>
+    <script type="module" src="/src/App.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+main{
+    @include flex (row, 0, center, center);
+    width: 100%;
+    min-height: 100vh;
+}
+.item{
+    background-color: var(--accent);
+    position: relative;
+    height: 3.13rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    &.active &__input{
+        width: 12.5rem;
+    }
+    &.active &__btn{
+        transform: translateX(150px);
+    }
+    & &__input{
+        width: 3.125rem;
+        height: 3.125rem;
+        transition: width 0.3s ease;
+        padding: 0.5rem;
+        &::placeholder{
+            color: var(--text)
+        }
+        &:focus{
+            color: var(--text)
+        }
+    }
+    &__btn{
+        @include flex (row, 0, center, center);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s ease;
+        border: 0;
+        cursor: pointer;
+        background-color: var(--accent);
+    }
+    &__svg{
+        filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(271deg) brightness(111%) contrast(112%);
+    }
+    &__btn:focus, &__input:focus{
+        outline: none;
+    }
+}

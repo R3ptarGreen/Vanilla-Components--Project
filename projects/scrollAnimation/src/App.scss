@@ -1,0 +1,44 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+main{
+    @include flex (column, 1rem, center, center);
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+}
+ .title{
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-family: var(--titleType);
+    font-weight: bold
+}
+.box{
+    @include flex (row, 0, center, center);
+    background-color: var(--accent);
+    width: 100%;
+    min-width: 18rem;
+    max-width: 25rem;
+    height: 12.5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease;
+    transform: translateX(400%);
+    & h2{
+        font-size: 2rem;
+        font-family: var(--subtitle);
+    }
+    &:nth-of-type(even){
+        transform: translateX(-400%);
+    }
+    &.active{
+        transform: translateX(0%    );
+    }
+}
+@media (min-width: 480px) {
+    .title{
+        font-size: 3rem;
+    }
+}

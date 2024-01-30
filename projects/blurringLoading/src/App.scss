@@ -1,0 +1,29 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+main{
+    @include flex (row, 0, center, center);
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+.bg{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/public/assets/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0px);
+    z-index: 0;
+}
+.loadingText{
+    z-index: 1;
+    font-size: 3rem;
+    font-family: var(--titleType);
+    font-weight: bold;
+}

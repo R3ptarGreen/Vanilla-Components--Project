@@ -1,0 +1,10 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    @include flex(row, 0, center, center);
+    padding: 1rem;
+}
+
