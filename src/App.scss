@@ -3,9 +3,18 @@
 @import './global/mixins/mixins.scss';
 
 .header{
+    @include flex(column, 1rem, center, center);
     padding: 1rem;
     display: flex;
-    flex-direction: column;
+    text-align: center;
+    & h1 {
+        font-size: 3rem;
+        font-family: var(--titleType);
+        font-weight: bold;
+    }    
+    & p{
+        max-width: 60%;
+    }
 }
 .item{
     @include flex(row, 0, center, center);
@@ -17,7 +26,6 @@
     overflow: hidden;
     width: fit-content;
     min-width: 2.5rem;
-    align-self: end;
     &.active &__input{
         width: 12.5rem;
     }
