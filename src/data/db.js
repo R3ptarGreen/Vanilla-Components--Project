@@ -3,15 +3,8 @@ const Projects = [
         "id": "1",
         "title": "Expanding Cards",
         "description": "Animated Slide Expanding Image",
-        "link":"/expandingCards",
-        "srcImg": "https://i.pinimg.com/564x/d5/30/c3/d530c3bf9c1335296757be986b15a851.jpg"
-    },
-    {
-        "id": "1",
-        "title": "Expanding Cards",
-        "description": "Animated Slide Expanding Image",
         "link":"https://65afd7711706ab1e832649d0--stupendous-vacherin-a8d787.netlify.app/",
-        "mock": "https://i.pinimg.com/564x/d5/30/c3/d530c3bf9c1335296757be986b15a851.jpg"
+        "mock": "https://i.pinimg.com/564x/8a/9b/05/8a9b056b973819acb041545654449bd1.jpg"
     },
     {
         "id":"2",
@@ -76,5 +69,5 @@ const Projects = [
         "link": "https://65b85380303f707b96cb8cab--glowing-tartufo-69fc85.netlify.app/",
         "mock":""
     }
-]
+] 
 export default Projects;

@@ -4,7 +4,7 @@ const containerMap = document.getElementById("cardsContainer")
 const cardData = Projects
 
 class myCardButton {
-    constructor(title, link, srcImg, description) {
+    constructor(title, link, mock, description) {
         //create the element
         this.card = document.createElement('a')
         this.img = document.createElement('img')
@@ -25,7 +25,7 @@ class myCardButton {
         this.cardTitle.textContent = title
         this.cardDescription.textContent = description
         //img
-        this.img.src = srcImg
+        this.img.src = mock
         this.img.classList.add("cards__img")
 
     }
@@ -39,7 +39,7 @@ class myCardButton {
 }
 
 const createCardFromDb = () => {
-    return cardData.map(item => new myCardButton(item.title, item.link, item.srcImg, item.description))
+    return cardData.map(item => new myCardButton(item.title, item.link, item.mock, item.description))
 }
 
 const renderCards = (cards) => {
@@ -48,3 +48,25 @@ const renderCards = (cards) => {
 
 const cards = createCardFromDb();
 renderCards(cards)
+
+
+//Search Button Bar//
+
+const container = document.getElementById('container')
+const input = document.getElementById('input')
+const btn = document.getElementById('btn')
+
+btn.addEventListener('click', () => {
+    container.classList.toggle('active')
+    input.focus()
+})
+input.addEventListener('keyup', e => {
+    const searchText = e.target.value.toLowerCase();
+
+    document.querySelectorAll('.cards__card').forEach(card => {
+        const cardTitle = card.querySelector('.cards__title').textContent.toLowerCase();
+        cardTitle.includes(searchText)
+            ? card.classList.remove('filter')
+            : card.classList.add('filter');
+    });
+})
