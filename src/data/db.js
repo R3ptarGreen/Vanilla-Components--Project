@@ -92,9 +92,6 @@ const Projects = [
     },
 
 
-
-
-
     {
         "id": "00",
         "title": "Coming Soon",

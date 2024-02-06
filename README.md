@@ -34,7 +34,7 @@ WikiCoffee is a project designed and coded by Edgar Mendez. Create a list of van
 
 ### Links
 
-- Live Site URL: [Vanilla Components](https://preeminent-clafoutis-155b8c.netlify.app/)
+- Live Site URL: [Vanilla Components](https://zippy-malasada-01aeb6.netlify.app/)
 
 |#|Component|Live Demo|
 |---|---|---|  
