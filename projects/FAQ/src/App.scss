@@ -1,0 +1,70 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    @include flex(column, 0, center, start);
+    padding: 1rem;
+}
+
+h1{
+    margin-top: 8rem; 
+    font-family: var(--titleType);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.item{
+    @include flex(column, 1rem, center, start);
+    width: 80%;
+    padding: 1rem;
+
+    .faq{
+        background-color: var(--secondary);
+        padding: 1rem;
+        border-radius: 1rem;
+        position: relative;
+        width: 100%;
+        min-width: 15rem;
+        max-width: 35rem;
+        box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.5);
+        &__ask{
+            width: calc(100% - 1.5rem);
+            font-size: 1.5rem;
+            font-family: var(--subtitle);
+        }
+        &__answer{
+            margin-top: 1rem;
+            display: none;
+        }
+        &__toggle{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2rem;
+            height: 2rem;   
+            transform: translate(-35%, 35%);
+            cursor: pointer;
+            filter: invert(99%) sepia(96%) saturate(17%) hue-rotate(291deg) brightness(104%) contrast(100%);
+        }
+        &__svg{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &.active .down{
+            display: none;
+        }
+        &.active .close{
+            display: block;
+        }
+        &.active p{
+            display: block;
+        }
+        & .close{
+            display: none;
+        }
+
+    }
+}

@@ -1,0 +1,26 @@
+@import './global/reset/reset.scss';
+@import './global/variables/variables.scss';
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    @include flex(row, 0, center, center);
+    padding: 1rem;
+}
+
+.item{
+    @include flex(row, 1rem, center, center);
+    &__key{
+        @include flex(column, 0.25rem, center, center);
+        background-color: var(--secondary);
+        padding: 1rem;
+        border-radius: 1rem;
+        font-weight: bold;
+        cursor: default;
+        & span:nth-child(2){
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: var(--accent)
+        }
+    }
+}

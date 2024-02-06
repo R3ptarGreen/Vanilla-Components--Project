@@ -68,6 +68,35 @@ const Projects = [
         "description": "A simple Bad Jokes Api",
         "link": "https://65b85380303f707b96cb8cab--glowing-tartufo-69fc85.netlify.app/",
         "mock":"/assets/img/mocks/badJokes.png"
+    },
+    {
+        "id": "11",
+        "title":"KeyCode",
+        "description": "You can used to see the key code",
+        "link": "https://65b9bd85351bb07eae75bac6--verdant-salamander-42ada5.netlify.app/",
+        "mock":"/assets/img/mocks/keyCode.png"
+    },
+    {
+        "id": "12",
+        "title":"FAQ",
+        "description": "Frequently Asked Questions Example",
+        "link": "https://65bacddd70790333e67d9456--stirring-buttercream-e4545b.netlify.app/",
+        "mock":"/assets/img/mocks/FAQ.png"
+    },
+    {
+        "id": "13",
+        "title":"Random Choice Picker",
+        "description": "A simple game to choose a random choice picker",
+        "link": "https://65bc2b5409fcd008a9bb403d--resplendent-liger-ce9f26.netlify.app/",
+        "mock":"/assets/img/mocks/RCP.png"
+    },
+    {
+        "id": "14",
+        "title":"Animated Menu Navigation",
+        "description": "Simple Animation Nav",
+        "link": "",
+        "mock":"/assets/img/mocks/animatedMenu.png"
     }
+
 ] 
 export default Projects;
