@@ -100,6 +100,16 @@
         position: relative;
         overflow: hidden;
         box-shadow: 6px 3px 24px 0px rgba(0,0,0,0.5);
+        &:nth-child(14){
+            & div{
+                background-color: rgba($color: #720455, $alpha: .75);
+                font-weight: bold;
+            }
+            & img{
+                height: 70%;
+                border-radius: 1rem 1rem 0 0;
+            }
+        }
     }
     &__img{
         width: 100%;    
