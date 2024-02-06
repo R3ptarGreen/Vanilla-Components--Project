@@ -56,10 +56,19 @@ const container = document.getElementById('container')
 const input = document.getElementById('input')
 const btn = document.getElementById('btn')
 
+// event when the user click outside, close the component
+window.document.addEventListener('click', e => {
+    if (!container.contains(e.target)) {
+        container.classList.remove('active')
+    }
+})
+// event to toggle the search widget
 btn.addEventListener('click', () => {
     container.classList.toggle('active')
     input.focus()
 })
+
+// searching code
 input.addEventListener('keyup', e => {
     const searchText = e.target.value.toLowerCase();
 
