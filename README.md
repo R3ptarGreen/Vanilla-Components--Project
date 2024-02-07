@@ -25,7 +25,7 @@ As a developer, "Practice makes perfect." Here, I've been creating a mini compon
 
 ### The Challenge
 
-WikiCoffee is a project designed and coded by Edgar Mendez. Create a list of vanilla components.
+Vanilla Components List is a project designed and coded by Edgar Mendez. To create a list of vanilla components only using HTML/CSS/JS.
 
 ### Screenshot
 
